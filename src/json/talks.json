@@ -1,0 +1,30 @@
+{
+  "data": [
+    {
+      "type": "message",
+      "talk": "bom dia",
+      "message": "Bom dia 😁, tenha um ótimo dia."
+    },
+    {
+      "type": "message",
+      "talk": "bomdia",
+      "message": "Bom dia 😁, tenha um ótimo dia."
+    },
+
+    {
+      "type": "message",
+      "talk": "boa noite",
+      "message": "Boa noite 😎"
+    },
+    {
+      "type": "message",
+      "talk": "boanoite",
+      "message": "Boa noite 😎"
+    },
+    {
+      "type": "command",
+      "talk": "!hi",
+      "message": "Olá"
+    }
+  ]
+}
