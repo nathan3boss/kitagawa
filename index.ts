@@ -18,7 +18,11 @@ bot.on('ready', () => {
 
 // Talks
 bot.on('messageCreate', async (ctx: Message<boolean>) => {
-  if (ctx.author.bot) return;
+  if (ctx.author.bot) {
+    log('message', 'bot message received', { message: ctx.content });
+
+    return;
+  }
 
   const msgn = ctx.content.toLocaleLowerCase();
 
@@ -31,11 +35,18 @@ bot.on('messageCreate', async (ctx: Message<boolean>) => {
 
   talks.map(({ talk, message, type }) => {
     if (type === 'command' && msgn.startsWith(talk)) {
+      log('success', 'command answered', {
+        message: ctx.content,
+        command: talk,
+      });
+
       ctx.reply(message);
     }
 
-    if(type === 'message' && msgn.includes(talk)) {
-      ctx.channel.send(message)
+    if (type === 'message' && msgn.includes(talk)) {
+      log('success', 'message sent', { message: ctx.content, command: talk });
+
+      ctx.channel.send(message);
     }
   });
 });
