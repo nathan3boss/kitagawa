@@ -33,20 +33,24 @@ bot.on('messageCreate', async (ctx: Message<boolean>) => {
 
   const talks = JSON.parse(coretalks).data;
 
-  talks.map(({ talk, message, type }) => {
+  talks.map(({ talk, message, type, love }) => {
     if (type === 'command' && msgn.startsWith(talk)) {
       log('success', 'command answered', {
         message: ctx.content,
         command: talk,
       });
 
-      ctx.reply(message);
+      ctx.reply(
+        ctx.author.id == process.env.BOYFRIEND && love ? love : message
+      );
     }
 
     if (type === 'message' && msgn.includes(talk)) {
       log('success', 'message sent', { message: ctx.content, command: talk });
 
-      ctx.channel.send(message);
+      ctx.channel.send(
+        ctx.author.id == process.env.BOYFRIEND && love ? love : message
+      );
     }
   });
 });

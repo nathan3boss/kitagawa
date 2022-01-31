@@ -3,12 +3,14 @@
     {
       "type": "message",
       "talk": "bom dia",
-      "message": "Bom dia 😁, tenha um ótimo dia."
+      "love": "Bom dia meu amor <3",
+      "message": "Bom dia 😁"
     },
     {
       "type": "message",
       "talk": "bomdia",
-      "message": "Bom dia 😁, tenha um ótimo dia."
+      "love": "Bom dia meu amor <3",
+      "message": "Bom dia 😁."
     },
 
     {
@@ -23,8 +25,28 @@
     },
     {
       "type": "command",
-      "talk": "!hi",
+      "talk": "!gostoso",
+      "message": "<@661921241925419054> Ai gostoso dms"
+    },
+    {
+      "type": "command",
+      "talk": "Oi",
       "message": "Olá"
+    },
+    {
+      "type": "command",
+      "talk": "Olá",
+      "message": "Olá"
+    },
+    {
+      "message": "<@471741528637702175> 😱😭😭",
+      "talk": "!maykow",
+      "type": "command"
+    },
+    {
+      "message": "<@661921241925419054> seu gostoso, não pense em se matar, eu te amo !",
+      "talk": "!death",
+      "type": "command"
     }
   ]
 }

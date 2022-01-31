@@ -9,6 +9,8 @@
     "forceConsistentCasingInFileNames": true,
     "strict": false,
     "outDir": "./build",
-    "skipLibCheck": true
-  }
+    "skipLibCheck": true,
+  },
+  "include": ["src"],
+  "compileOnSave": true
 }
